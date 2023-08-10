@@ -50,6 +50,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
-$route['google_login/dashboard/(:num)'] = 'google_login/dashboard/$1';
+$route['google_login/login/'] = 'google_login/login';
+
+$route['google_login/logout/'] = 'google_login/logout';
+
+$route['google_login/dashboard/(:any)'] = 'google_login/dashboard/$1';
+
+$route['google_login/callback'] = 'google_login/callback';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+

@@ -11,9 +11,9 @@ class Dashboard extends CI_Controller {
         $this->load->model('user_model');
     }
 
-    public function index($user_id) {
-        $data['user'] = $this->user_model->get_user_by_id($user_id);
-        $this->load->view('dashboard_view', $data);
+    public function index() {
+        // $data['user'] = $this->user_model->get_user_by_id();
+        $this->load->view('dashboard_view');
     }
 }
  
